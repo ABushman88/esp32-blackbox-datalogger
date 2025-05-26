@@ -4,7 +4,7 @@
 A fault-tolerant flight data logger for capturing aerospace telemetry using ESP32, logging to microSD in real time.
 
 ## 2. System Block Diagram
-Currently Working On.
+![System Block Diagram](../images/ESP32%20Blackbox%20Datalogger.drawio.png)
 
 ## 3. Hardware Components
 - **ESP32 WROOM** — main microcontroller
