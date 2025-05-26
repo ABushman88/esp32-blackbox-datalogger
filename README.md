@@ -17,7 +17,20 @@ This project is a prototype of an aerospace black box designed to log flight-cri
 - Optional: Battery backup circuit
 
 ## Folder Structure
-<pre> ``` project-root/ ├── firmware/ │ └── main.ino ├── docs/ │ └── system-design.md ├── logs/ │ └── sample-flight.csv ├── images/ │ └── wiring-diagram.png ├── .gitignore ├── README.md └── LICENSE ``` </pre>
+```
+project-root/
+├── firmware/
+│   └── main.ino
+├── docs/
+│   └── system-design.md
+├── logs/
+│   └── sample-flight.csv
+├── images/
+│   └── wiring-diagram.png
+├── .gitignore
+├── README.md
+└── LICENSE
+```
 
 ## Data Output Format (Planned)
 | Time (UTC) | Altitude (m) | Accel (m/s²) | Gyro (°/s) | Latitude | Longitude |
