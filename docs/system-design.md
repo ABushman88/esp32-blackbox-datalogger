@@ -64,3 +64,4 @@ A fault-tolerant flight data logger for capturing aerospace telemetry using ESP3
 - Wi-Fi sync to remote ground station
 - Sensor fusion filtering
 - Real-time web dashboard via ESP32
+- Temperature sensor integration (BMP280 / DHT22 / DS18B20)
