@@ -38,5 +38,5 @@ project-root/
 | HH:MM:SS   | 1234.56      | X,Y,Z        | X,Y,Z      |
 
 ## Status
-Hardware is being assembled and ordered. 
+Hardware is being assembled.
 Firmware and system design documentation in progress.
