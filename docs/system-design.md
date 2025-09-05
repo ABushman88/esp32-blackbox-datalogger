@@ -4,7 +4,7 @@
 A fault-tolerant flight data logger for capturing aerospace telemetry using ESP32, logging to microSD in real time.
 
 ## 2. System Block Diagram
-![System Block Diagram](../images/ESP32%20Blackbox%20Datalogger.drawio.png)
+![System Block Diagram](../images/ESP32%20Blackbox%20Datalogger.drawio(1).png)
 
 ## 3. Firmware Flow Overview
 1. Initialize all peripherals (RTC, IMU, SD card).
