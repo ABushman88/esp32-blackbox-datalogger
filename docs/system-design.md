@@ -7,7 +7,7 @@ A fault-tolerant flight data logger for capturing aerospace telemetry using ESP3
 ![System Block Diagram](../images/ESP32%20Blackbox%20Datalogger.drawio.png)
 
 ## 3. Firmware Flow Overview
-1. Initialize all peripherals (RTC, IMU, GPS, SD card).
+1. Initialize all peripherals (RTC, IMU, SD card).
 2. Wait for "Start Logging" button.
 3. Begin sensor data logging.
 4. Timestamp with DS3231.
@@ -17,18 +17,16 @@ A fault-tolerant flight data logger for capturing aerospace telemetry using ESP3
 ## 4. Component Interfaces
 - **ESP32 <-> DS3231**: I2C
 - **ESP32 <-> MPU6050 / BMP280**: I2C(Shared)
-- **ESP32 <-> GPS**: UART
-- **ESP32 <-> SD card**: SPI
 - **Pushbutton/LEDs**: GPIO
 
 ## 5. Logging Strategy
 - CSV format: `flight-YYYYMMDD-HHMM.csv`
 - Sample rate: 10hz
-- Columns: Time, Altitude, Accel (XYZ), Gyro (XYZ), Lat, Lon
+- Columns: Time, Altitude, Accel (XYZ), Gyro (XYZ)
 
 ## 6. Fault Handling
 - SD not found -> retry, blink LED
-- GPS no fix -> log "N/A"
+- Document behavior if sensors fail (e.g., "log N/A if IMU disconnected")
 - Power loss -> flush buffer, auto-recover
 
 
@@ -37,7 +35,6 @@ A fault-tolerant flight data logger for capturing aerospace telemetry using ESP3
 - **DS3231 RTC** — accurate timestamping
 - **MPU6050** — IMU for acceleration and gyroscope
 - **BMP280** — barometric pressure (altitude)
-- **GPS Module** — latitude and longitude
 - **microSD Module** — data storage
 - **Pushbuttons & LEDs** — user interface
 - **Battery Backup** — optional for power failure handling
@@ -51,9 +48,9 @@ A fault-tolerant flight data logger for capturing aerospace telemetry using ESP3
 6. Another button press stops logging
 
 ## 9. Data Format
-| Time (UTC) | Altitude (m) | Accel (m/s²) | Gyro (°/s) | Latitude | Longitude |
-|------------|--------------|--------------|------------|----------|-----------|
-| HH:MM:SS   | 1234.56      | X,Y,Z        | X,Y,Z      | xx.xxxx  | xx.xxxx   |
+| Time (UTC) | Altitude (m) | Accel (m/s²) | Gyro (°/s) |
+|------------|--------------|--------------|------------|
+| HH:MM:SS   | 1234.56      | X,Y,Z        | X,Y,Z      |
 
 ## 10. Resilience Plan
 - Buffered writes to handle brief power loss
