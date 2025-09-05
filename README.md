@@ -2,7 +2,7 @@
 This project is a prototype of an aerospace black box designed to log flight-critical telemetry such as altitude, acceleration, orientation, and GPS location to a mircoSD card in real time using an ESP32.
 
 ## Features (Planned)
-- Real-time sensor data acquisition (IMU, barometer, GPS)
+- Real-time sensor data acquisition (IMU, barometer)
 - Timestamped logging using DS3231 RTC
 - Push-button controlled logging start/stop
 - Power failure resilience
@@ -33,9 +33,9 @@ project-root/
 ```
 
 ## Data Output Format (Planned)
-| Time (UTC) | Altitude (m) | Accel (m/s²) | Gyro (°/s) | Latitude | Longitude |
-|------------|--------------|--------------|------------|----------|-----------|
-| HH:MM:SS   | 1234.56      | X,Y,Z        | X,Y,Z      | xx.xxxx  | xx.xxxx   |
+| Time (UTC) | Altitude (m) | Accel (m/s²) | Gyro (°/s) |
+|------------|--------------|--------------|------------|
+| HH:MM:SS   | 1234.56      | X,Y,Z        | X,Y,Z      |
 
 ## Status
 Hardware is being assembled and ordered. 
